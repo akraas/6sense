@@ -207,9 +207,9 @@
 <div class="arrow-up hide-on-med-and-down"></div>
 <div class="wm_menu grey-text hide-on-med-and-down show-on-large">
 	<ul>
-		<li><i class="material-icons">track_changes</i> <a href="/setscanfile/unset">Show all nmap scan</a></li>
+		<li><i class="material-icons">track_changes</i> <a href="/setscanfile/unset">Show all scan</a></li>
 		<li><i class="material-icons">settings_input_antenna</i> <a href="/">Show scan details</a></li>
-		<li><i class="material-icons">add_box</i> <a href="#!" onclick="javascript:newscan();">New Nmap scan</a></li>
+		<li><i class="material-icons">add_box</i> <a href="#!" onclick="javascript:newscan();">New scan</a></li>
 		{% if scanfile %}
 			<li><i class="fas fa-file-pdf" style="margin-left:2px;font-size:20px;"></i> <a href="#!" onclick="javascript:genPDF('{{ scanmd5 }}');">PDF Report</a></li>
 			<li><i class="fas fa-bug" style="margin-left:2px;font-size:20px;"></i> <a href="#!" onclick="javascript:checkCVE();">Check CVE</a></li>
@@ -238,10 +238,12 @@
 				<li><i class="fas fa-exclamation-triangle"></i> <a onclick="javascript:$('html, body').animate({ scrollTop: ($('#{{ i }}').offset().top - 60) }, 1000);" href="#!">{{ i }}</a></li>
 			{% endfor %}
 		{% endif %}
+		<!--
 		<li class="wm_line"><div>social</div></li>
 		<li><i class="fab fa-github" style="font-size:20px;"></i> <a href="">GitHub Project</a></li>
 		<li><i class="fas fa-star"></i> <a href="#!" id="githubstar">1</a></li>
 		<li><i class="fas fa-code-branch"></i> <a href="#!" id="githubfork">1</a></li>
+		-->
 	</ul>
 </div>
 {% endif %}
@@ -253,7 +255,7 @@
 			<img src="/static/logoblack.png" style="max-width:200px;margin-top:20px;">
 		</div><br>
 	</div></li>
-	<li><a href="/setscanfile/unset"><i class="material-icons">track_changes</i>Show all Nmap scan</a></li>
+	<li><a href="/setscanfile/unset"><i class="material-icons">track_changes</i>Show all scan</a></li>
 	<li><a href="/"><i class="material-icons">settings_input_antenna</i>Show scan details</a></li>
 
 	<!--
