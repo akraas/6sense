@@ -157,21 +157,21 @@ function checkActiveScan() {
 }
 
 function newscan() {
-	$('#modaltitle').html('<i class="material-icons">wifi_tethering</i> New Nmap Scan');
+	$('#modaltitle').html('<i class="material-icons">wifi_tethering</i> New Scan');
 	$('#modalbody').html(
-		'Run a new Nmap scan by setting the following 3 parameters:'+
+		'Run a new scan by setting the following 3 parameters:'+
 		'<div class="input-field">'+
 		'	<div class="small">'+
 		'		<div style="padding:20px;">'+
-		'		<b>Filename:</b><br>Name of the Nmap XML file. This name must has the <code class="language-markup">.xml</code> extension.<br>Allowed chars: <code>[a-zA-Z0-9], _, - and .</code><br><br>'+
+		'		<b>Filename:</b><br>Name of the XML file. This name must has the <code class="language-markup">.xml</code> extension.<br>Allowed chars: <code>[a-zA-Z0-9], _, - and .</code><br><br>'+
 		'		<b>Target:</b><br>This could be the target IP address or hostname<br><br>'+
-		'		<b>Parameters:</b><br>Nmap parameters, more information at <a href="https://nmap.org/book/man-briefoptions.html">https://nmap.org/book/man-briefoptions.html</a>'+
+//		'		 <b>Parameters:</b><br>Nmap parameters, more information at <a href="https://nmap.org/book/man-briefoptions.html">https://nmap.org/book/man-briefoptions.html</a>'+ 
 		'		<div>'+
 		'	</div>'+
 		'<br>'+
 		'	<input placeholder="XML Filename (ex. my_scan.xml)" id="xmlfilename" type="text" class="validate">'+
 		'	<input placeholder="Target IP or hostname (ex. 192.168.1.0/24)" id="targethost" type="text" class="validate">'+
-		'	<input placeholder="Nmap Parameters (ex. -sT -A -T4)" id="params" type="text" class="validate">'+
+		'	<input placeholder="Parameters (ex. -sT -A -T4)" id="params" type="text" class="validate">'+
 		'	<br><br>'+
 		'	<div class="row">'+
 		'		<div class="col s4 grey-text darken-3"><h6>Schedule:</h6></div>'+
