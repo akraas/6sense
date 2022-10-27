@@ -21,6 +21,7 @@ FROM ubuntu:latest
 
 ENV DEBIAN_FRONTEND noninteractive
 
+RUN apt-get update && apt-get install -y wget
 RUN wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1-1ubuntu2.1\~18.04.20_amd64.deb
 RUN dpkg -i libssl1.1_1.1.1-1ubuntu2.1~18.04.20_amd64.deb
 
@@ -33,8 +34,9 @@ RUN mkdir /opt/xml && mkdir /opt/notes && \
 
 RUN pip3 install Django requests xmltodict && \
     cd /opt/ && django-admin startproject nmapdashboard && cd /opt/nmapdashboard && \
-    git clone https://github.com/infinition/WebMap-1.git nmapreport && \
+    git clone https://github.com/jakeelong/WebMap-1.git nmapreport && \
     cd nmapreport && git checkout master
+
     
 
 RUN cp /opt/nmapdashboard/nmapreport/docker/settings.py /opt/nmapdashboard/nmapdashboard/
