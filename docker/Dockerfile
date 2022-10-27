@@ -1,14 +1,14 @@
-# WebMap
+# 6sense
 # -
-# https://github.com/SECUREFOREST/WebMap
-# Author: SECUREFOREST, Original version - theMiddle
+# https://github.com/akraas/6sense.git
+# Author: akraas, Original version - theMiddle
 # -
 # Usage:
 #   $ cd /opt
-#   $ git clone https://github.com/SECUREFOREST/WebMap.git
-#   $ cd WebMap/docker
-#   $ docker build -t webmap:latest .
-#   $ docker run -d -v /opt/WebMap/docker/xml:/opt/xml -p 8000:8000 webmap:latest
+#   $ git clone https://github.com/akraas/6sense.git
+#   $ cd 6sense/docker
+#   $ docker build -t 6sense:latest .
+#   $ docker run -d -v /opt/6sense/docker/xml:/opt/xml -p 8000:8000 6sense:latest
 #
 # Nmap Example:
 #   $ nmap -sT -A -oX /tmp/myscan.xml 192.168.1.0/24
